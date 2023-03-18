@@ -2,6 +2,15 @@ import msvcrt
 import os
 print("My FIling Program")
 
+# By Pondi
+def listitem():
+    os.system("cls")
+    myFile = open("data.txt", "r")
+    print("Series No" +"\t"+"Brand Name"+"\t"+"Price")
+    for z in myFile:
+        a,b,c = z.strip("\n").split("\t")
+        print(a + "\t\t" + b + "\t\t"+ c)
+# By Pondi
 
 def additem():
     choice = '1'
@@ -46,12 +55,15 @@ def menu():
         print("This is Main Menu:")
         print("1. Add Item")
         print("2. Delete Item")
+        print("3. List Item")
         print("9. Exit")
         key = msvcrt.getch().decode('ASCII')
         if key == '1':
             additem()
         elif key == '2':
             delitem()
+        elif key == '3':
+            listitem()
         elif key == '9':
             break
         else:
