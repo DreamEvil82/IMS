@@ -8,7 +8,6 @@ def listitem():
     myFile = open("data.txt", "r")
     print("Series No" +"\t"+"Brand Name"+"\t"+"Price")
     for z in myFile:
-        a
         a,b,c = z.strip("\n").split("\t")
         print(a + "\t\t" + b + "\t\t"+ c)
 # By Pondi
